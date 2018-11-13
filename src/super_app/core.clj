@@ -1,8 +1,7 @@
 (ns super-app.core
   (:require [super-app.person :as person])
   (:require [super-app.simple-jms :as jms])
-  (:import [spark Spark])
-  (:gen-class))
+  (:import [spark Spark]))
 
 (defn handle
   [fn] (reify spark.Route (handle [_ req res] (fn req res))))
